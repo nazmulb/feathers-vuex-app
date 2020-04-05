@@ -1,0 +1,32 @@
+version: '3'
+volumes:
+  db:
+networks:
+  fvapp:
+    driver:
+      bridge
+services:
+  ui:
+    build: ./ui
+    volumes:
+      - ./ui:/ui
+    ports:
+      - "8080:8080"
+    networks:
+      - fvapp
+  api:
+    build: ./api
+    volumes:
+      - ./api:/api
+    ports:
+      - "3030:3030"
+    networks:
+      - fvapp
+  db:
+    image: mongo:latest
+    volumes:
+      - "db:/data/db"
+    ports:
+      - 27017:27017
+    networks:
+      - fvapp
