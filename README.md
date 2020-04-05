@@ -1,2 +1,2 @@
 # feathers-vuex-app
-This is a web application with FeathersJS, VueJS &amp; Vuex.
+This is a web application by using FeathersJS, VueJS &amp; Vuex.
