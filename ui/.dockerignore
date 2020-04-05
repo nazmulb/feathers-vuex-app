@@ -1,9 +1,0 @@
-node_modules
-logs
-.git
-.idea
-.vscode
-.gitignore
-.DS_Store
-*.log
-*.swp

@@ -6,20 +6,14 @@ networks:
     driver:
       bridge
 services:
-  ui:
-    build: ./ui
-    volumes:
-      - ./ui:/ui
-    ports:
-      - "8080:8080"
-    networks:
-      - fvapp
   api:
-    build: ./api
+    build: .
     volumes:
-      - ./api:/api
+      - ./:/api
     ports:
       - "3030:3030"
+    depends_on:
+      - db
     networks:
       - fvapp
   db:

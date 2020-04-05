@@ -4,7 +4,7 @@ ENV REFRESHED_AT 2020-04-05
 
 WORKDIR /api
 
-COPY ./package*.json ./
+COPY package*.json ./
 
 RUN npm install
 
